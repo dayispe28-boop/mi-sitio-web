@@ -1,0 +1,161 @@
+/* CSS styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Fondo rosa pastel */
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    position: relative; /* Para permitir los efectos visuales */
+}
+
+h1 {
+    color: #ff4081; /* Rosa brillante para el título */
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive; /* Fuente romántica */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ad4f97; /* Lila pastel suave */
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive; /* Fuente romántica */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#botones {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #f8bbd0; /* Rosa pastel claro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Dancing Script', cursive;
+}
+
+button:hover {
+    background-color: #f06292; /* Rosa más oscuro al pasar el mouse */
+}
+
+#respuesta {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ad4f97; /* Lila para la respuesta */
+}
+
+.introduccion {
+    background-color: #f8bbd0; /* Rosa pastel claro */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.carta {
+    background-color: #fff3e0; /* Fondo de carta en color beige */
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #f0c7a1; /* Borde de la carta en tono cálido */
+    margin: 30px auto;
+    max-width: 600px;
+    font-size: 18px;
+    text-align: left;
+    font-family: 'Dancing Script', cursive; /* Fuente romántica */
+}
+
+.carta h2 {
+    color: #ad4f97; /* Lila pastel para el título de la carta */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.pregunta {
+    background-color: #e1bee7; /* Lila pastel claro */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative; /* Permite que los corazones aparezcan dentro de esta sección */
+    overflow: hidden; /* Asegura que los corazones no se salgan del contenedor */
+}
+
+#preguntaNueva {
+    background-color: #f3e5f5; /* Lila pastel claro */
+    display: none; /* Se oculta inicialmente */
+}
+
+/* Estilo de los corazones (como globos) */
+.corazon {
+    position: absolute;
+    width: 40px; /* Tamaño de los corazones */
+    height: 40px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: corazonAnimacion 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+.corazon::before, .corazon::after {
+    content: "";
+    position: absolute;
+    width: 40px; /* Tamaño de los corazones */
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.corazon::before {
+    left: -20px;
+    top: 0;
+}
+
+.corazon::after {
+    top: -20px;
+    left: 0;
+}
+
+/* Animación de los corazones subiendo como globos */
+@keyframes corazonAnimacion {
+    0% { 
+        transform: scale(0); 
+        opacity: 1; 
+        bottom: -50px;
+    }
+    50% { 
+        transform: scale(1.5); 
+        opacity: 0.7; 
+        bottom: 50%; /* Mueve los corazones hacia el centro */
+    }
+    100% { 
+        transform: scale(0); 
+        opacity: 0; 
+        bottom: 100%; /* Mueve los corazones fuera de la pantalla */
+    }
+}
+
+/* Estilo del mensaje de amor */
+#mensajeDeAmor {
+    background-color: #ffebee; /* Fondo suave de color rosa */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF1493; /* Rosa brillante */
+    display: none; /* Se oculta inicialmente */
+}	  
