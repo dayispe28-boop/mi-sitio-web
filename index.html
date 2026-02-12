@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi San Valentín</title>
+    <!-- Agregamos Google Fonts para una fuente más romántica -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Agregamos la librería de Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Apartado de introducción -->
+        <section class="introduccion">
+            <h2>Amor de Mi Vida</h2>
+            <p>¡Hola, princesita hermosa! Me pase mucho tiempo pensando en cómo hacer algo especial para used en esta fecha, que hoy toma un significado muy importante, ya que es nuestro primer San Valentín juntas de miles que nos esperan, quería hacer algo único para usted mi niña hermosa. Este es un pequeño detalle para expresar lo que siento.</p>
+        </section>
+
+        <!-- Apartado de la carta -->
+        <section class="carta">
+            <h2>Una Carta para Usted</h2>
+            <p>Querida Naydelin (amor mío, vida mía, dueña de mi corazón, princesa mía, mi todo),</p>
+            <p>Paso los días pensando en cómo hacerle sentir este amor que llevo en mi corazón, trato de crearme miles de escenarios en como puedo hacerle llegar este amor. Mi niña hermosa se que esta pequeña historia de amor comenzó de la manera más loca del mundo, pero no cambiaría nada de todo lo que hemos pasado y está pasando porque si le soy sincera es lo mejor de mi vida. Mi princesa agradezco todo el camino que he tenido que recorrer porque al final la encontré y es que es una persona tan única, tan especial, que siento que nunca en mi vida experimenté el amor hasta que la besé por primera vez que nunca mi corazón estuvo en su lugar hasta que me encontré entre sus brazos, usted es mi lugar en este mundo, de hecho, usted es mi mundo. Amor cada instante a su lado, amo amarla y amo el amor porque es lo que experimento con usted. Gracias por todo mi niña hermosa. Tiene mi corazón en sus manos mi vida y espero que la vida y Diosito nos permita seguir desarrollando esta historia que cada día amo más. En este 14 de febrero que es un día especial, ya que, celebra el amor y es justo celebrarlo porque por primera vez lo experimento tan intensamente con la persona que más amo en este mundo, quiero compartirlo con usted. Es una persona increíble y me encantaría pasar más tiempo con usted y seguir coleccionando más recuerdo juntas.</p>
+            <p>Gracias por ser tan única y por darme la oportunidad de ser parte de su vida. Espero que este San Valentín sea solo el comienzo de algo maravilloso.</p>
+            <p>Con cariño,</p>
+            <p>Esthefy 💖</p>
+        </section>
+
+        <!-- Apartado de la pregunta original -->
+        <section id="preguntaOriginal" class="pregunta">
+            <h1 id="titulo">¿Quiere ser mi San Valentín?</h1>
+            <div id="botones">
+                <button onclick="respuesta('sí')">¡Sí, quiero!</button>
+                <button onclick="respuesta('no')">No, lo siento</button>
+            </div>
+        </section>
+
+        <!-- Apartado para la nueva pregunta si seleccionan "No" -->
+        <section id="preguntaNueva" class="pregunta" style="display: none;">
+            <h1 id="tituloNueva">Le daré una nueva oportunidad 😄 jaja ¿Me daría la dicha de ser mi San Valentín 🥺?</h1>
+            <div id="botonesNueva">
+                <button onclick="respuestaNueva('sí')">Sí, definitivamente</button>
+                <button onclick="respuestaNueva('sí')">Sí, ahora ya quiero</button>
+            </div>
+        </section>
+
+        <!-- Respuesta después de la interacción -->
+        <p id="respuesta"></p>
+
+        <!-- Nuevo apartado para mostrar mensaje después de la segunda pregunta -->
+        <section id="mensajeDeAmor" style="display: none;">
+            <h2>¡Gracias por decir que sí! Aunque sea a la fuerza 😂💖</h2>
+            <p>La Amo Mucho, ¡y este San Valentín será increíble!💗</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
